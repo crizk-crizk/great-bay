@@ -1,3 +1,5 @@
+const password = require("secrets.js");
+
 const mysql = require("mysql");
 const connection = mysql.createConnection({
   host: "localhost",
@@ -6,11 +8,13 @@ const connection = mysql.createConnection({
   // Your username
   user: "root",
   // Be sure to update with your own MySQL password!
-  password: "password",
-  database: "ice_creamDB",
+  password: password,
+  database: "greatbay_db",
 });
 connection.connect((err) => {
   if (err) throw err;
   console.log(`connected as id ${connection.threadId}`);
   connection.end();
 });
+
+module.exports = connection;
