@@ -1,3 +1,5 @@
+const password = require("../secrets.js");
+
 const mysql = require("mysql");
 const password = require("secretes.js");
 
@@ -17,4 +19,8 @@ connection.connect((err) => {
   connection.end();
 });
 
+<<<<<<< HEAD
 module.exports = connection;
+=======
+module.exports = connection;
+>>>>>>> 0191e8fb63f67327d6a4cf84e9052d13bbdf184f
