@@ -7,6 +7,33 @@ const inquirer = require('inquirer');
 
 // inquirer prompts
 //list: post, bid or exit
+//prompt 
+function mainPrompt() {
+  return inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "mainStep",
+        message: "Would you like to post or bid?",
+        choices: ["Post an item", "Bid on an item", "Exit"],
+      },
+    ])
+    .then((answers) => {
+      console.log(answers);
+      if (answers.mainStep === "Post an item") {
+        postItem();
+      } else if (answers.mainStep === "Bid on an item") {
+        bidItem();
+      } else {
+        endConnection();
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      mainPrompt();
+    });
+}
+
 
 // post prompt 
   //what to post?  item name
@@ -21,3 +48,4 @@ const inquirer = require('inquirer');
 
 
 
+module.exports = ("prompts.js")
