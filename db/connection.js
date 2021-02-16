@@ -1,4 +1,4 @@
-const password = require("secrets.js");
+const password = require("../secrets.js");
 
 const mysql = require("mysql");
 const connection = mysql.createConnection({
