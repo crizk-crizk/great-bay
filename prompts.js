@@ -9,7 +9,7 @@ const inquirer = require('inquirer');
 //list: post, bid or exit
 //prompt 
 function mainPrompt() {
-  return inquirer
+  inquirer
     .prompt([
       {
         type: "list",
@@ -30,15 +30,40 @@ function mainPrompt() {
     })
     .catch((error) => {
       console.log(error);
-      mainPrompt();
     });
 }
 
+mainPrompt();
+
 
 // post prompt 
-  //what to post?  item name
-  //what category
-  // price
+  function postItem () {
+    // maybe async??
+    inquirer
+      .prompt([
+        //what to post? item name
+        {
+          input: "type",
+          name: "postItem",
+          message: "What is the item that you want to post?",
+        },
+        //what category
+        {
+          input: "type",
+          name: "catItem",
+          message: "What type of item is it?",
+        },
+        // price
+        {
+          input: "type",
+          name: "postItem",
+          message: "What will be the starting bid for this item?",
+        },
+      ])
+      .then((answers) => {
+        console.log(answers);
+      })
+  }
 
 // bid prompt
   //choose from items avai for bid
