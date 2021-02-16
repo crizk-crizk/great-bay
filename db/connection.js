@@ -1,7 +1,7 @@
 const password = require("../secrets.js");
 
 const mysql = require("mysql");
-const password = require("../secrets");
+
 const connection = mysql.createConnection({
   host: "localhost",
   // Your port, if not 3306
