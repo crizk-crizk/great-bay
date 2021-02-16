@@ -37,32 +37,32 @@ mainPrompt();
 
 
 // post prompt 
-  function postItem () {
-    // maybe async??
-    inquirer
-      .prompt([
-        //what to post? item name
-        {
-          input: "type",
-          name: "postItem",
-          message: "What is the item that you want to post?",
-        },
-        //what category
-        {
-          input: "type",
-          name: "catItem",
-          message: "What type of item is it?",
-        },
-        // price
-        {
-          input: "type",
-          name: "postItem",
-          message: "What will be the starting bid for this item?",
-        },
-      ])
-      .then((answers) => {
-        console.log(answers);
-      })
+function postItem () {
+  // maybe async??
+  inquirer
+    .prompt([
+      //what to post? item name
+      {
+        input: "type",
+        name: "postItem",
+        message: "What is the item that you want to post?",
+      },
+      //what category
+      {
+        input: "type",
+        name: "catItem",
+        message: "What type of item is it?",
+      },
+      // price
+      {
+        input: "type",
+        name: "postItem",
+        message: "What will be the starting bid for this item?",
+      },
+    ])
+    .then((answers) => {
+      console.log(answers);
+    })
   }
 
 // bid prompt

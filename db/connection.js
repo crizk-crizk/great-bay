@@ -1,4 +1,5 @@
 const password = require("../secrets.js");
+const prompts = require("../prompts");
 
 const mysql = require("mysql");
 
