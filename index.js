@@ -1,25 +1,19 @@
-//DEPENDENCIES 
+const { resourceUsage } = require("process");
 
+//DEPENDENCIES
 // importing db
-  // mysql 
-
+const db = require("./db/connection.js");
 
 // STARTING DATA
 // connection
 
-
 //FUNCTIONS
-  // readItemsTypes 
-  // store items 
-  // 
+// readItemsTypes
+// store items
+//
 
-  //comparison function
-    // to know price
-
-
+//comparison function
+// to know price
 
 //USER INTERACTIONS
-  //prompts.js
-
-
-
+//prompts.js
