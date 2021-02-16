@@ -1,5 +1,7 @@
 // DEPENDENCIES
 // req inquirer
+const inquirer = require('inquirer');
+
 
 
 
